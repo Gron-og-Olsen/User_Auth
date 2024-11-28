@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{FC1FE4A8-B37E-4F95-A595-AFC129DCDFC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{8AD75D75-7CE9-482F-B0A2-4E6BB7A2C98B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{D7561F02-50FA-45C5-92E3-0C1B7D98EB4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC1FE4A8-B37E-4F95-A595-AFC129DCDFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1FE4A8-B37E-4F95-A595-AFC129DCDFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1FE4A8-B37E-4F95-A595-AFC129DCDFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1FE4A8-B37E-4F95-A595-AFC129DCDFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD75D75-7CE9-482F-B0A2-4E6BB7A2C98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD75D75-7CE9-482F-B0A2-4E6BB7A2C98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD75D75-7CE9-482F-B0A2-4E6BB7A2C98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD75D75-7CE9-482F-B0A2-4E6BB7A2C98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7561F02-50FA-45C5-92E3-0C1B7D98EB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7561F02-50FA-45C5-92E3-0C1B7D98EB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7561F02-50FA-45C5-92E3-0C1B7D98EB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7561F02-50FA-45C5-92E3-0C1B7D98EB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
