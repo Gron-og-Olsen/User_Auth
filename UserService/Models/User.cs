@@ -6,7 +6,7 @@ namespace Models;
 public class User
 {
     [BsonId]
-
+    [BsonRepresentation(BsonType.String)] // Ensures the Guid is stored as a string in MongoDB
     public Guid Id { get; set; }
 
     public string? Name { get; set; }
