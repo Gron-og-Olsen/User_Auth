@@ -4,6 +4,9 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
+builder.Services.AddControllers();
+
 // Læs de hemmelige værdier fra miljøvariabler
 string mySecret = Environment.GetEnvironmentVariable("Secret") ?? "defaultsecret";
 string myIssuer = Environment.GetEnvironmentVariable("Issuer") ?? "defaultissuer";

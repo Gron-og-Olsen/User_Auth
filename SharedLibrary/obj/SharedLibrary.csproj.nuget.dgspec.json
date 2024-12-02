@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\SharedLibrary.csproj": {}
+    "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\SharedLibrary.csproj": {
+    "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
         "projectName": "SharedLibrary",
-        "projectPath": "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
+        "projectPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
         "packagesPath": "C:\\Users\\Charm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "VaultSharp": {
+              "target": "Package",
+              "version": "[1.17.5.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

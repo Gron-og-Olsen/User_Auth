@@ -1,11 +1,63 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "VaultSharp/1.17.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/VaultSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/VaultSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "VaultSharp/1.17.5.1": {
+      "sha512": "1O/F+AQCkyK4K709pBDYEbDDfJ12OlaE5lnOs9dffq+KxqrnPxh8FIdQtEst9yBJmC7I0BptftzTJyRSwhZR/A==",
+      "type": "package",
+      "path": "vaultsharp/1.17.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/VaultSharp.dll",
+        "lib/net462/VaultSharp.xml",
+        "lib/net47/VaultSharp.dll",
+        "lib/net47/VaultSharp.xml",
+        "lib/net471/VaultSharp.dll",
+        "lib/net471/VaultSharp.xml",
+        "lib/net472/VaultSharp.dll",
+        "lib/net472/VaultSharp.xml",
+        "lib/net48/VaultSharp.dll",
+        "lib/net48/VaultSharp.xml",
+        "lib/net481/VaultSharp.dll",
+        "lib/net481/VaultSharp.xml",
+        "lib/net6.0/VaultSharp.dll",
+        "lib/net6.0/VaultSharp.xml",
+        "lib/net7.0/VaultSharp.dll",
+        "lib/net7.0/VaultSharp.xml",
+        "lib/net8.0/VaultSharp.dll",
+        "lib/net8.0/VaultSharp.xml",
+        "lib/netstandard2.0/VaultSharp.dll",
+        "lib/netstandard2.0/VaultSharp.xml",
+        "lib/netstandard2.1/VaultSharp.dll",
+        "lib/netstandard2.1/VaultSharp.xml",
+        "vaultsharp.1.17.5.1.nupkg.sha512",
+        "vaultsharp.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "VaultSharp >= 1.17.5.1"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Charm\\.nuget\\packages\\": {},
@@ -14,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
       "projectName": "SharedLibrary",
-      "projectPath": "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
+      "projectPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj",
       "packagesPath": "C:\\Users\\Charm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Charm\\Documents\\Auktioner\\User_Auth\\SharedLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +108,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "VaultSharp": {
+            "target": "Package",
+            "version": "[1.17.5.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

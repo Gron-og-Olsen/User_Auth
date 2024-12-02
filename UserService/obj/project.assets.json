@@ -307,6 +307,19 @@
           }
         }
       },
+      "VaultSharp/1.17.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/VaultSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/VaultSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "ZstdSharp.Port/0.7.3": {
         "type": "package",
         "compile": {
@@ -319,6 +332,9 @@
       "SharedLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VaultSharp": "1.17.5.1"
+        },
         "compile": {
           "bin/placeholder/SharedLibrary.dll": {}
         },
@@ -1031,6 +1047,41 @@
         "version.txt"
       ]
     },
+    "VaultSharp/1.17.5.1": {
+      "sha512": "1O/F+AQCkyK4K709pBDYEbDDfJ12OlaE5lnOs9dffq+KxqrnPxh8FIdQtEst9yBJmC7I0BptftzTJyRSwhZR/A==",
+      "type": "package",
+      "path": "vaultsharp/1.17.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/VaultSharp.dll",
+        "lib/net462/VaultSharp.xml",
+        "lib/net47/VaultSharp.dll",
+        "lib/net47/VaultSharp.xml",
+        "lib/net471/VaultSharp.dll",
+        "lib/net471/VaultSharp.xml",
+        "lib/net472/VaultSharp.dll",
+        "lib/net472/VaultSharp.xml",
+        "lib/net48/VaultSharp.dll",
+        "lib/net48/VaultSharp.xml",
+        "lib/net481/VaultSharp.dll",
+        "lib/net481/VaultSharp.xml",
+        "lib/net6.0/VaultSharp.dll",
+        "lib/net6.0/VaultSharp.xml",
+        "lib/net7.0/VaultSharp.dll",
+        "lib/net7.0/VaultSharp.xml",
+        "lib/net8.0/VaultSharp.dll",
+        "lib/net8.0/VaultSharp.xml",
+        "lib/netstandard2.0/VaultSharp.dll",
+        "lib/netstandard2.0/VaultSharp.xml",
+        "lib/netstandard2.1/VaultSharp.dll",
+        "lib/netstandard2.1/VaultSharp.xml",
+        "vaultsharp.1.17.5.1.nupkg.sha512",
+        "vaultsharp.nuspec"
+      ]
+    },
     "ZstdSharp.Port/0.7.3": {
       "sha512": "U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "type": "package",
@@ -1064,19 +1115,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cbjoe\\.nuget\\packages\\": {}
+    "C:\\Users\\Charm\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cbjoe\\OneDrive\\Desktop\\Sem4\\UserServiceAuth\\UserService\\UserService.csproj",
+      "projectUniqueName": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\UserService\\UserService.csproj",
       "projectName": "UserService",
-      "projectPath": "C:\\Users\\cbjoe\\OneDrive\\Desktop\\Sem4\\UserServiceAuth\\UserService\\UserService.csproj",
-      "packagesPath": "C:\\Users\\cbjoe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cbjoe\\OneDrive\\Desktop\\Sem4\\UserServiceAuth\\UserService\\obj\\",
+      "projectPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\UserService\\UserService.csproj",
+      "packagesPath": "C:\\Users\\Charm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\UserService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cbjoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Charm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1084,14 +1140,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\cbjoe\\OneDrive\\Desktop\\Sem4\\UserServiceAuth\\SharedLibrary\\SharedLibrary.csproj": {
-              "projectPath": "C:\\Users\\cbjoe\\OneDrive\\Desktop\\Sem4\\UserServiceAuth\\SharedLibrary\\SharedLibrary.csproj"
+            "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj": {
+              "projectPath": "C:\\Users\\Charm\\Documents\\Eksamenprojekt\\User_Auth\\SharedLibrary\\SharedLibrary.csproj"
             }
           }
         }
@@ -1143,7 +1200,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
