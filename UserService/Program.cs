@@ -1,7 +1,11 @@
 using MongoDB.Driver;
 using Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Register PasswordHasher for User
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 // Configure MongoDB settings
 var mongoSettings = builder.Configuration.GetSection("MongoDB");
