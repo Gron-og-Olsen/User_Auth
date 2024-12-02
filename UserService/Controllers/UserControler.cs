@@ -5,7 +5,7 @@ using Models;
 namespace UserService.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]")]//hej
 public class UserController : ControllerBase
 {
     private readonly IMongoCollection<User> _userCollection;
