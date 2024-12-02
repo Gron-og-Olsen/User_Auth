@@ -1,20 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Models;
+using Microsoft.AspNetCore.Identity; // Add the Identity namespace for password hashing
 
 namespace UserService.Controllers;
 
 [ApiController]
-[Route("[controller]")]//hej
+[Route("[controller]")]
 public class UserController : ControllerBase
 {
     private readonly IMongoCollection<User> _userCollection;
     private readonly ILogger<UserController> _logger;
+    private readonly IPasswordHasher<User> _passwordHasher;
 
-    public UserController(IMongoCollection<User> userCollection, ILogger<UserController> logger)
+    public UserController(IMongoCollection<User> userCollection, ILogger<UserController> logger, IPasswordHasher<User> passwordHasher)
     {
         _userCollection = userCollection;
         _logger = logger;
+        _passwordHasher = passwordHasher;
     }
 
     // Endpoint for adding a new user via POST
@@ -29,6 +32,9 @@ public class UserController : ControllerBase
             newUser.Id = Guid.NewGuid();
         }
 
+        // Hash the password before storing it
+        newUser.Password = _passwordHasher.HashPassword(newUser, newUser.Password);
+
         // Insert the new user into MongoDB
         await _userCollection.InsertOneAsync(newUser);
 
@@ -39,19 +45,25 @@ public class UserController : ControllerBase
         return CreatedAtRoute("GetUserById", new { UserId = newUser.Id }, newUser);
     }
 
-    // Endpoint to get all users
-    [HttpGet(Name = "GetAllUsers")]
-    public async Task<ActionResult<List<User>>> GetAllUsers()
+    [HttpGet("Username/{username}", Name = "GetUserByUsername")]
+    public async Task<ActionResult<User>> GetUserByUsername(string username)
     {
-        _logger.LogInformation("Method GetAllUsers called at {DT}", DateTime.UtcNow.ToLongTimeString());
+        _logger.LogInformation("Method GetUserByUsername called for username {Username} at {DT}", username, DateTime.UtcNow.ToLongTimeString());
 
-        var users = await _userCollection.Find(_ => true).ToListAsync();
+        // Search for the user by username
+        var user = await _userCollection.Find(u => u.Username == username).FirstOrDefaultAsync();
 
-        return Ok(users);
+        if (user == null)
+        {
+            return NotFound(new { message = $"User with username {username} not found." });
+        }
+
+        return Ok(user);
     }
 
+
     // Endpoint to get a user by ID
-    [HttpGet("{UserId}", Name = "GetUserById")]
+    [HttpGet("id/{UserId}", Name = "GetUserById")]
     public async Task<ActionResult<User>> GetUserById(Guid UserId)
     {
         _logger.LogInformation("Method GetUserById called at {DT}", DateTime.UtcNow.ToLongTimeString());
